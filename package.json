@@ -1,0 +1,28 @@
+{
+  "name": "node-session-auth-demo",
+  "version": "1.0.0",
+  "description": "A practical demonstration of session-based authentication using Node.js &amp; Express. Focusing on HTTP status codes and cookie management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanm00n/Node-Session-Auth-Demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/seanm00n/Node-Session-Auth-Demo/issues"
+  },
+  "homepage": "https://github.com/seanm00n/Node-Session-Auth-Demo#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.20.0",
+    "path": "^0.12.7"
+  }
+}
