@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const router = express.Router(); // 라우터 객체 생성
 const db = require('../config/db');
 
@@ -30,7 +31,7 @@ router.post("/login", (req, res) => {
         if(results.length > 0){
             const user = results[0];
             if(user.password === password){
-                res.send(`login success, ${username}`);
+                res.send("login success");
             }else{
                 res.status(401).send("invalid password");
             }
