@@ -36,7 +36,7 @@ This project was developed with the assistance of Google Gemini as a collaborati
   * Assisted in debugging middleware order issues, 
   * explaining the internal logic of `express-session`, 
   * and optimizing asynchronous `fetch` operations.
-  Human Input:  
+* Human Input:  
   * System architecture design, 
   * database schema definition, 
   * and final logic verification were conducted manually to ensure a deep understanding of the backend flow.
