@@ -31,13 +31,36 @@ router.post("/login", (req, res) => {
         if(results.length > 0){
             const user = results[0];
             if(user.password === password){
-                res.send("login success");
+                req.session.userId = user.id;
+                req.session.username = user.username;
+
+                res.status(200).json({ 
+                    success: true, 
+                    code: "LOGIN_SUCCESS", 
+                    message: `login success, ${username}` 
+                });
             }else{
                 res.status(401).send("invalid password");
             }
         }else{
             res.status(401).send("username not exist");
         }
+    });
+});
+
+router.post("/logout", (req, res)=>{
+    req.session.destroy((err)=>{
+        if(err){
+            console.log("세션 삭제 에러: ", err);
+            res.status(500).send("로그아웃 실패");
+        }
+
+        res.clearCookie('connect.sid');
+
+        res.status(200).json({
+            success: true,
+            code: "LOGOUT_SUCCESS",
+            message: "logout success"});
     });
 });
 

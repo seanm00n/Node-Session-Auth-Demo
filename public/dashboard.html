@@ -18,7 +18,35 @@
     <p>로그인에 성공하여 메인 페이지에 접속하셨습니다.</p>
     <hr>
     <p>현재 상태: <b>인증됨 (Authenticated)</b></p>
-    <button onclick="location.href='/'">로그아웃 (메인으로)</button>
+    <button onclick="logout()">로그아웃 (메인으로)</button>
+
+    <script>
+        // dashboard.html 내부 스크립트
+        async function logout() {
+            try {
+                const response = await fetch('/user/logout', {
+                    method: 'POST'
+                });
+
+                if (response.ok) {
+                    console.log("response ok");
+                    const result = await response.json();
+
+                    if(result.code === "LOGOUT_SUCCESS"){
+                        alert("로그아웃 되었습니다.");
+                        // 세션이 없으므로 이제 대시보드에 접근 못하고 로그인 페이지로 튕깁니다.
+                        window.location.href = '/'; 
+                    }
+
+                }else{
+                    const msg = await response.text();
+                    alert("로그아웃 실패: " + msg);
+                }
+            } catch (error) {
+                console.error("로그아웃 오류:", error);
+            }
+        }
+    </script>
 </div>
 
 </body>
