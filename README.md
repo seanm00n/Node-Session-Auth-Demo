@@ -2,7 +2,7 @@
 
 > **"A robust backend authentication system built with Node.js, emphasizing server-side state management and middleware processing pipelines."**
 
-[Read this in Korean / 한국어 버전으로 읽기](./README-ko.md)
+[Read this in Korean / 한국어 버전으로 읽기](./README_KR.md)
 
 ---
 
