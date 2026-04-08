@@ -7,7 +7,8 @@
 ---
 
 ## 📌 Project Overview
-This project implements the core principles of **User Authentication** and **Stateful Session Management** in a web environment. As an aspiring server developer, I focused on building a secure "Request Pre-processing Pipeline" and ensuring reliable data synchronization between the MySQL database, server memory, and client-side cookies.
+This project implements the core principles of User Authentication and Stateful Session Management in a web environment.
+As an aspiring server developer, I focused on building a secure "Request Pre-processing Pipeline" and ensuring reliable data synchronization between the MySQL database, server memory, and client-side cookies.
 
 ## 🚀 Key Features
 * **Middleware Pipeline Architecture**: Designed a structured pre-processing flow using `express.json()` and `express-session`.
@@ -22,13 +23,16 @@ This project implements the core principles of **User Authentication** and **Sta
 * **Libraries:** `express-session`, `dotenv`
 
 ## 🏗 System Architecture
-I approached the `req` (Request) object as a dynamic workspace. Every request passes through a "pre-processing factory" where session data is injected before it reaches the business logic.
-
-
+I approached the `req` (Request) object as a dynamic workspace. 
+Every request passes through a "pre-processing factory" where session data is injected before it reaches the business logic.
 
 ## 🔧 Troubleshooting & Lessons Learned
-* **Session Initialization**: Fixed a critical crash by ensuring the session middleware is declared before any routers, preventing `undefined` property access.
-* **Async Data Fetching**: Optimized the frontend login/logout flow by correctly utilizing `await response.json()` to handle asynchronous HTTP responses.
+* Session Initialization: Fixed a critical crash by ensuring the session middleware is declared before any routers, preventing `undefined` property access.
+* Async Data Fetching: Optimized the frontend login/logout flow by correctly utilizing `await response.json()` to handle asynchronous HTTP responses.
+
+## 🤖 AI Collaboration Disclosure
+This project was developed with the assistance of Google Gemini as a collaborative pair-programming partner. 
+* Role of AI: Assisted in debugging middleware order issues, explaining the internal logic of `express-session`, and optimizing asynchronous `fetch` operations.
+* Human Input: System architecture design, database schema definition, and final logic verification were conducted manually to ensure a deep understanding of the backend flow.
 
 ---
-*Developed by a Software Developer based in Brisbane, QLD.*

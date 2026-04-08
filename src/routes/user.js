@@ -14,13 +14,13 @@ router.post("/signup", (req, res) => {
             return res.status(500).send("failed to signup");
         }
         console.log("signup success: ",result);
-        res.send(`singup complete, ${username}`); //왜 여기는 ` ` 이거야?
+        res.send(`singup complete, ${username}`);
     });
     
 });
 
 router.post("/login", (req, res) => {
-    const { username, password } = req.body; // 이게 무슨 문법?
+    const { username, password } = req.body;
     
     const sql = "SELECT * from users WHERE `username`=?"; //password 가져와야함
     db.query(sql, [username], (err, results) =>{
