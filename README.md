@@ -32,13 +32,15 @@ Every request passes through a `pre-processing factory` where session data is in
 
 ## 🤖 AI Collaboration Disclosure
 This project was developed with the assistance of Google Gemini as a collaborative pair-programming partner. 
-* Role of AI:  
+* **Role of AI**:  
   * Assisted in debugging middleware order issues, 
   * explaining the internal logic of `express-session`, 
   * and optimizing asynchronous `fetch` operations.
-* Human Input:  
+* **Human Input**:  
   * System architecture design, 
   * database schema definition, 
   * and final logic verification were conducted manually to ensure a deep understanding of the backend flow.
-
+* **Learning Methodology**: 
+  * Beyond simple code generation, I focused on a **"First Principles"** approach. 
+  * Every AI-suggested logic was cross-verified with official documentation to fully grasp the underlying mechanics of HTTP state management and middleware execution order.
 ---
